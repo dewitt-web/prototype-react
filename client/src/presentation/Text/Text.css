@@ -1,0 +1,115 @@
+.text {
+  display: block;
+}
+
+/* NOTE: If only we could use all: revert; */
+
+/* Blocks */
+.text h1,
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6,
+.text p,
+.text blockquote,
+.text dd,
+.text dl,
+.text dt,
+.text figcaption,
+.text figure,
+.text hr,
+.text pre {
+  all: unset;
+  display: block;
+}
+
+.text h1 {
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  font-weight: bold;
+}
+
+.text h2 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  font-weight: bold;
+}
+
+.text h3 {
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  font-weight: bold;
+}
+
+.text h4 {
+  font-size: 1em;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  font-weight: bold;
+}
+
+.text h5 {
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  font-weight: bold;
+}
+
+.text h6 {
+  font-size: 0.67em;
+  margin-block-start: 2.33em;
+  margin-block-end: 2.33em;
+  font-weight: bold;
+}
+
+/* Inline */
+.text a,
+.text abbr,
+.text b,
+.text bdi,
+.text bdo,
+.text br,
+.text cite,
+.text code,
+.text data,
+.text dfn,
+.text em,
+.text i,
+.text kbd,
+.text mark,
+.text q,
+.text rb,
+.text rp,
+.text rt,
+.text rtc,
+.text ruby,
+.text s,
+.text samp,
+.text small,
+.text strong,
+.text sub,
+.text sup,
+.text time,
+.text u,
+.text var,
+.text wbr {
+  all: unset;
+  display: inline;
+}
+
+.text a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text strong {
+  font-weight: bold;
+}
+
+.text em {
+  font-style: italic;
+}

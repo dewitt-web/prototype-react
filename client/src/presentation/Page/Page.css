@@ -1,0 +1,110 @@
+.page {
+  display: grid;
+  grid-template:
+    "header" auto
+    "aside" auto
+    "body" 1fr /* fill up remaining vertical space */
+    "footer" auto;
+  min-height: 100%;
+}
+.page__header { grid-area: header; }
+.page__aside { grid-area: aside; }
+.page__body { grid-area: body; }
+.page__footer { grid-area: footer; }
+
+/* All layout sections have these default values */
+.page > * {
+  /* - CSS Variables - related via Gestalt Design Principles, including "Common Fate"
+    (Also see https://www.nngroup.com/articles for more UX Design/Research)
+  */
+
+  /* - Fonts - related via Font Pairings, except for icons */
+  --font-main: 'Heebo', sans-serif;
+  --font-icons: 'Material Icons';
+
+  /* - Sizes - related via Golden Ratio/Fibonacci Sequence, except for borders
+    (Use for font-size, margins, padding, etc)
+  */
+  --size-1: 0.25rem;
+  --size-2: 0.5rem;  /* calc(var(--size-1) + var(--size-1)) */
+  --size-3: 0.75rem; /* calc(var(--size-1) + var(--size-2)) */
+  --size-4: 1.25rem; /* calc(var(--size-2) + var(--size-3)) */
+  --size-5: 2rem;    /* calc(var(--size-3) + var(--size-4)) */
+  --size-borders: 2px;
+
+  /* - Colors - related via Color Theory */
+  --color: #333; /* Main color of this section */
+  --color-2: #555; /* Slightly stand out from "color" */
+  --color-contrast: #eee; /* Contrast with "color" and "color-2", possibly as a background */
+  --color-contrast-2: #ccc; /* Slightly stand out from "color-contrast", still contrasting with "color-2" (and possibly "color") */
+
+  padding: var(--size-5);
+  font-family: var(--font-main);
+  line-height: calc(1em + var(--size-3)); /* font height + space (Maybe adjust using https://grtcalculator.com/) */
+  text-align: center;
+  background-color: var(--color-contrast);
+  color: var(--color);
+
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--size-2);
+}
+
+.page__header {
+  --color: #ffe; /* Main color of this section */
+  --color-2: #ddc; /* Slightly stand out from "color" */
+  --color-contrast: #997; /* Contrast with "color" and "color-2", possibly as a background */
+  --color-contrast-2: #bb9; /* Slightly stand out from "color-contrast", still contrasting with "color-2" (and possibly "color") */
+
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.2));
+  box-shadow: 0 var(--size-2) var(--size-2) rgba(0, 0, 0, 0.2);
+  font-size: var(--size-4);
+}
+
+/*
+  - Colors (Dark Mode) -
+  For those who prefer a darker color scheme, reverse the variations and contrast
+  (Light mode is default and can be explicitly set via <html class="light">)
+
+  Ex:
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) .page > .page__body {
+    --color-bg-1: var(--color-1-1c);
+    --color-fg-1: var(--color-1-1);
+    --color-bg-2: var(--color-1-2c);
+    --color-fg-2: var(--color-1-2);
+  }
+}
+*/
+
+.page__nav {
+  display: grid;
+  grid-auto-flow: row;
+  gap: var(--size-3);
+  font-size: var(--size-3);
+}
+
+.page__nav a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.page__nav a.active {
+  font-weight: bold;
+}
+
+.page__nav a.active::before {
+  content: '> ';
+}
+
+@media (min-width: 20em) {
+  .page__nav {
+    grid-auto-flow: column;
+    justify-content: center;
+  }
+}
