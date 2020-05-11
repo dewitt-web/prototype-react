@@ -1,0 +1,47 @@
+/* - CSS Reset - Replace bad defaults for #root and above */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Remove default styling - should come from a presentation component instead */
+header, main, footer, aside, address, article, section, nav,
+hgroup, h1, h2, h3, h4, h5, h6, ul, ol, li, p, blockquote, dd, dl, dt, figcaption, figure, hr, pre,
+a, abbr, b, bdi, bdo, br, cite, code, data, dfn, em, i, kbd, mark, q, rb, rp, rt, rtc, ruby, s,
+samp, small, strong, sub, sup, time, u, var, wbr, area, audio, img, map, track, video,
+embed, iframe, object, param, picture, source, canvas, del, ins,
+caption, col, colgroup, table, tbody, td, tfoot, th, thead, tr, button, fieldset, form, input, label,
+legend, meter, optgroup, option, output, progress, select, textarea, details, dialog, menu, summary
+span, div {
+  all: unset;
+  display: contents;
+}
+
+/* Heebo hebrew */
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Heebo'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/heebo/v5/NGS6v5_NC0k9P9H0TbFzsQ.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* Heebo latin */
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Heebo'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/heebo/v5/NGS6v5_NC0k9P9H2TbE.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Material Icons */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}

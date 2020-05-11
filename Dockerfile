@@ -14,8 +14,8 @@ ENV NODE_ENV=development
 EXPOSE 3000
 EXPOSE 9229
 
-# Set current directory to /prototype-react
-WORKDIR /prototype-react
+# Set current directory to /prototype-react/client (easier than needing to cd into the folder every time)
+WORKDIR /prototype-react/client
 
 # By default, open bash shell for commands
 CMD ["bash"]
