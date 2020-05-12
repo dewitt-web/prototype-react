@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { BasePage, TodoList } from '../_shared'
-import fetchJSON from '../../fetchJSON.js'
+import { fetchEffect } from '../../utils.js'
+
+const TODO_URL = 'https://jsonplaceholder.typicode.com/todos'
 
 const TodoPage = () => {
   const [todos, setTodos] = useState([])
-  useEffect(() => {
-    fetchJSON('https://jsonplaceholder.typicode.com/todos').then(setTodos)
-  }, [])
+  useEffect(
+    fetchEffect({ url: TODO_URL }, setTodos), [TODO_URL]
+  )
 
   return <BasePage>
     <TodoList todos={todos} />
