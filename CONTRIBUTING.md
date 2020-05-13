@@ -11,6 +11,9 @@ This is optional, but if you'd prefer to use Docker, you can simply run these tw
 - Run your terminal commands as needed
 - `exit` when done
 
+## Analyzing Bundle
+[source-map-explorer](https://www.npmjs.com/package/source-map-explorer) has been included so we can inspect the results of building our app. This can come in handy for debugging when our build files get too large. The goal is to keep these small in size and few in numbers, since frequency and size of requests impacts our app's performance. At time of writing, there is [a bug](https://github.com/danvk/source-map-explorer/issues/65#issuecomment-606750991) with this combination of react-scripts and source-map-explorer versions. Until it's resolved and we upgrade, we can use `npm run analyze -- -m --html source-map-explorer.html` to output an html file. Just be sure to `npm run build`, first. We can, alternatively, come back to this and try to replace it with something else (Ex. [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)).
+
 ## Creating Components
 Storybook has been added as visual documentation of presentation components. Use this tool (use `npm run storybook`) when creating any type of component. For presentation components, it provides a place to visually test and document your work. For non-presentation components, it shows the presentation component options - similar to how bootstrap or semantic ui components are documented.
 
