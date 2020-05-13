@@ -47,6 +47,7 @@
 
   display: grid;
   grid-auto-flow: row;
+  align-content: flex-start;
   gap: var(--size-2);
 }
 

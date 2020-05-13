@@ -5,7 +5,7 @@ import { Page } from '../'
 // NOTE: Not intended to be used as a page route (in App.js) directly
 const BasePage = ({ children, ...props }) => (
   <Page
-    header={<>
+    header={<header>
       React Example App
       <Page.Nav>
         <nav>
@@ -15,7 +15,7 @@ const BasePage = ({ children, ...props }) => (
           </ul>
         </nav>
       </Page.Nav>
-    </>}
+    </header>}
     {...props}
   >
     {children}
