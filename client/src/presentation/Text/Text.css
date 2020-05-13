@@ -24,6 +24,11 @@
   display: block;
 }
 
+.text p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 .text h1 {
   font-size: 2em;
   margin-block-start: 0.67em;
